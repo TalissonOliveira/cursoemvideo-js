@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div id="main">
+            <p>
+                <span>Ano de nascimento:</span>
+                <input type="number" name="txtano" id="txtano" min="0" id="ano">
+            </p>
+
+            <p>
+                <input type="radio" name="radsex" id="masc">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="femi" checked>
+                <label for="fem">Feminino</label>
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()" id="botao">
+            </p>
+        </div>
+
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+
+    </section>
+    <footer>
+        <p><a href="https://github.com/TalissonOliveira" >Talisson</a></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

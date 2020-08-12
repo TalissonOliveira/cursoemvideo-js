@@ -1,0 +1,80 @@
+body {
+    background: rgb(255, 169, 89);
+    font: Normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.280); 
+}
+
+div#res {
+    text-align: center;
+}
+
+div#res img {
+    display: block;
+    padding: 5% 25%;
+}
+
+input#botao{
+    color: rgb(46, 46, 46);
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    background: #4ceb02;
+    border: 1px solid #00e61f;
+    outline: 0;
+    font: 500 15pt Arial;
+}
+
+input#botao:hover {
+    background: #00e61f86
+}
+
+input#txtano {
+    font: 500 15pt Arial;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+    outline: 0;
+}
+
+label {
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+div #main {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+div#main p {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic; 
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
