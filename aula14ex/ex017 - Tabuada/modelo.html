@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
+
     <section>
         <div>
-            Teste
-        </div>
-        <div>
-            Olá
-        </div>
+            <input type="number" name="num" id="num">
 
+            <input type="button" value="Gerar tabuada" id="botao" onclick="tabuada()">
+        </div>
+        <div id="res">
+            <select name="resultado" id="resultado" size="10">
+                <option id='msg'>Digite um número acima</option>
+            </select>
+        </div>
     </section>
+    
     <footer>
         <p><a href="https://github.com/TalissonOliveira" >Talisson</a></p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
