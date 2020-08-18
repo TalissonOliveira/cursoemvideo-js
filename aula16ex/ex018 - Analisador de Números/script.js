@@ -36,6 +36,7 @@ function adicionarValor() {
 }
 
 function finalizar() {
+    res.innerHTML = ''
     if (valores.length == 0) {
         alert('Por favor, adicione algum número!')
     } else {

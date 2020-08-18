@@ -1,5 +1,5 @@
 body {
-    background: rgb(53, 132, 223);
+    background: rgb(226, 104, 23);
     font: Normal 15pt Arial;
 }
 
@@ -18,7 +18,7 @@ section {
 }
 
 select {
-    width: 175px;
+    width: 185px;
     display: block;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -29,6 +29,25 @@ select {
 div#res {
     margin-top: 15px;
     line-height: 30px;
+}
+
+input#txtnum {
+    width: 90px;
+    height: 22px;
+    font: 500 13pt Arial;
+    outline: 0;
+}
+
+input#botao {
+    background: rgb(105, 238, 28);
+    width: 80px;
+    height: 29px;
+    border: solid 1px green;
+    outline: 0;
+}
+
+input#botao:hover {
+    background: rgb(83, 196, 17);
 }
 
 footer {
