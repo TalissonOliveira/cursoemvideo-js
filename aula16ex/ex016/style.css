@@ -11,10 +11,24 @@ header {
 section {
     background: white;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     width: 500px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.280);;
+}
+
+select {
+    width: 175px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    font: 500 12pt Arial;
+}
+
+div#res {
+    margin-top: 15px;
+    line-height: 30px;
 }
 
 footer {
@@ -22,11 +36,6 @@ footer {
     text-align: center;
     font-style: italic; 
 }
-
-
-
-
-
 
 footer a {
     text-decoration: none;
