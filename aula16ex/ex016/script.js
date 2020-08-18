@@ -4,7 +4,6 @@ let num = Number(txtnum.value)
 let res = document.querySelector('div#res')
 let lista = document.querySelector('select#lista')
 
-
 function isNum(n) {
     if (n >= 1 && n <= 100) {
         return true
@@ -29,62 +28,42 @@ function adicionarValor() {
         let item = document.createElement('option')
         item.text = `Valor ${valores[valores.length-1]} adicionado!`
         lista.appendChild(item)
-        console.log(valores)
     } else {
         alert('Valor já adicionado ou inválido. Por favor, insira um valor entre 1 e 100!')
     }
     txtnum.value = ''
+    txtnum.focus()
 }
 
 function finalizar() {
     if (valores.length == 0) {
-        alert('Por favor, adiciona algum número!')
+        alert('Por favor, adicione algum número!')
     } else {
-        totalNumeros(valores)
-        maiorValor()
-        menorValor()
-        somarValores()
-        mediaValores(valores)
+        let total = valores.length
+        let soma = null
+        for (let posi in valores) {
+            soma += valores[posi]
+        }
+        let media = soma/total
+        
+        res.innerHTML += `Ao todo, temos ${total} números cadastrados.<br>`
+        maiorMenorValor()
+        res.innerHTML += `Somando todos os valores temos ${soma}.<br>`
+        res.innerHTML += `A média entre os valores é ${media}`
     }
 }
 
-function totalNumeros(l) {
-    res.innerHTML += `Ao todo, temos ${l.length} números cadastrados.<br>`
-}
-
-function maiorValor() {
-    let valor = null
+function maiorMenorValor() {
+    let maior = null
+    let menor = valores[0]
     for (let posi in valores) {
-        if (valores[posi] >= valor) {
-            valor = valores[posi]
+        if (valores[posi] > maior) {
+            maior = valores[posi]
+        }
+        if (valores[posi] < menor) {
+            menor = valores[posi]
         }
     }
-    res.innerHTML += `O maior valor informado foi ${valor}.<br>`
-}
-
-function menorValor() {
-    let valor = valores[0]
-    for (let posi in valores) {
-        if (valores[posi] <= valor) {
-            valor = valores[posi]
-        }
-    }
-    res.innerHTML += `O menor valor informado foi ${valor}.<br>`
-}
-
-function somarValores() {
-    let total = null
-    for (let posi in valores) {
-        total += valores[posi]
-    }
-    res.innerHTML += `Somando todos os valores temos ${total}.<br>`
-}
-
-function mediaValores(l) {
-    let total = null
-    for (let posi in l) {
-        total += l[posi]
-    }
-    let media = total/l.length
-    res.innerHTML += `A média entre os valores é ${media}.`
+    res.innerHTML += `O maior valor informado foi ${maior}.<br>`
+    res.innerHTML += `O menor valor informado foi ${menor}.<br>`
 }
